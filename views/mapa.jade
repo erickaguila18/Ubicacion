@@ -1,0 +1,40 @@
+doctype
+html(lang='es')
+	head
+		title='Mapa'
+		script(src="../js/jquery-1.11.2.min.js")
+		script(src="../js/bootstrap.min.js")
+		script(src="../js/leaflet.js")
+		script(src="../js/mapa.js")
+		link(href="../css/bootstrap.min.css" rel="stylesheet")
+		link(href="../css/estilo.css" rel="stylesheet")
+		link(href="../css/leaflet.css" rel="stylesheet")
+		script(src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js')
+		link(href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(charset='utf-8')
+	body(style="background-color:#eceff1;" onload="cargar();")
+		nav(class="navbar navbar-inverse")
+				div(class="container-fluid")
+					div(class="navbar-header")
+						button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hid")
+							span(class="icon-bar")
+							span(class="icon-bar")
+							span(class="icon-bar")
+						img(class="img-responsive"  href="#" src="../img/logotipo.png")
+					div(class="collapse navbar-collapse " id="hid")
+						ul(class="nav navbar-nav")
+							li: a(href="/home") Chat 
+							li: a(href="/signout") Salir 
+						
+
+		div(class="container")
+			hr(style="border-width: 2px;")
+			h2 Ubicación
+			br
+			div(class="container")
+				div(id="map" style="position:absolute; top:23%; bottom:10%; width:85%")
+			br
+			hr(style="border-width: 2px;")
+	footer(class="footer" ) 
+	
